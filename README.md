@@ -34,4 +34,7 @@ Now to acquire the amount of total reviewers, code was written to gather an aggr
 
 An additional analysis is recommended to support the statement (2 pt) -->
 * An additional analysis worth performing would be to also consider the average star rating of a review in each category. To obtain an answer to this question, we can return back to step 1 when we have a cleaned dataframe called "helpful_df", before it has been split into different categories based on Vine participation. A quicker method of obtaining these results is to take this un-split dataframe and used the .groupby() method to group reviews based on their 'vine' value (as opposed to invidiually creating the paid_df and unpaid_df then filtering those newly saved dataframes as needed). Aggregate functions performed on the two groups of 'vine' values returned both a count (which matches previously obtained results) and the average value of the 'star_rating' column. These results potentially suggest a small bias, as the paid reviews have an average star rating which is 0.47 points higher than unpaid reviews. If there is a bias it appears to be a very weak one however, as those same numbers could both be rounded to the same integer (4) using standard rounding methods.
+
 ![average_stars](Resources/average_rating.png)
+
+**FIGURE 4: AVERAGE STAR RATINGS FOR PAID AND UNPAID REVIEWS**
