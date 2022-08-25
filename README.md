@@ -13,18 +13,21 @@ The purpose of the following analysis is to determine whether any bias in presen
 Now to acquire the amount of total reviewers, code was written to gather an aggregate count of the unique 'review_id' values present in each filtered dataframe. That code can be viewed below. It found that there are 1,205 reviews by members of the Vine program, and a much larger 97,558 unpaid reviews. In future calculations this number will be used as the denominator to find the percentage of five-star reviews for each category.
 
 ![total_reviews](Resources/both_totals.png)
+
 **FIGURE 1: THE TOTAL AMOUNT OF PAID AND UNPAID REVIEWS**
 
 
 * The next step in finding the percentages of five-star reviews is to actually acquire the total amount of five-star reviews for each category of review. Using code that was very similar, an aggregate count function was used on the 'review_id' again to count the number of reviews. This time though, the previously created dataframes (paid_df and unpaid_df) were given an additional filter to *ONLY* select review rows where the 'star_rating' value was equal to 5. This limits the returned rows to only the five-star reviews. The returned dataframes state that 509 of the paid reviews were five-stars, while again a much larger value of 45,833 unpaid reviews had five-stars. The code and results of the described code can be viewed below in Fig. 2.
 
 ![five_reviews](Resources/five_stars.png)
+
 **FIGURE 2: THE AMOUNT OF FIVE-STAR PAID AND UNPAID REVIEWS**
 
 
 * Finally the results obtained above were divided to find the percentage of reviews in each category which were five-stars. These calculations determined that roughly 42% of paid reviews were five-star reviews while 47% of unpaid reviews were five-star reviews. The conclusion to be drawn from these values would support the idea that there **is not** bias shown towards five-star reviews solely based on whether a reviewer is part of the paid Vine Review program.
 
 ![percentages](Resources/percentages.png)
+
 **FIGURE 3: PERCENTAGE DISTRIBUTION OF PAID AND UNPAID FIVE-STAR REVIEWS**
 
 <!-- The summary states whether or not there is bias, and the results support this statement (2 pt)
